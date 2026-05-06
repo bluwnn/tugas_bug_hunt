@@ -105,7 +105,25 @@ Gunakan ikon teks/emoji
 
 ---
 
-### 6. Bug HTML: Penggunaan <a href="#"> untuk Aksi
+### 6. Bug HTML: Penggunaan < a href="#" > untuk Aksi
+
+### Masalah
+
+Menggunakan anchor (< a >) untuk aksi menyebabkan perilaku tidak diinginkan seperti scroll ke atas.
+
+### Kode bermasalah
+
+<img src="bug_6-1.png" alt="Alt Text" width="400" height="auto">
+
+### Perbaikan
+
+Gunakan elemen _button_
+
+<img src="bugfix_6-1.png" alt="Alt Text" width="400" height="auto">
+
+---
+
+### 7. Bug UX: Default Tanggal Tidak Valid
 
 ### Masalah
 
