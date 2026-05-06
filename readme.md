@@ -238,3 +238,26 @@ Padding dapat menyebabkan ukuran elemen melebihi container.
 ```
 
 ---
+
+  ### 12. Bug Struktur: Tidak Ada Pemisahan Field
+
+### Masalah
+
+Label dan input tidak terstruktur dengan baik, sehingga sulit dibaca dan dikembangkan.
+
+### Kode bermasalah
+
+```
+<label>NIM</label>
+<input type="text">
+```
+
+### Perbaikan
+
+```
+<form id="formMahasiswa">
+<div class="field">
+<label>NIM</label>
+<input type="text" id="nim" required />
+</div>
+```
