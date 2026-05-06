@@ -127,14 +127,16 @@ Gunakan elemen _button_
 
 ### Masalah
 
-Menggunakan anchor (< a >) untuk aksi menyebabkan perilaku tidak diinginkan seperti scroll ke atas.
+Dropdown tanggal, bulan, dan tahun memiliki nilai default sehingga pengguna dapat mengirim data tanpa memilih secara sadar.
 
 ### Kode bermasalah
 
-<img src="bug_6-1.png" alt="Alt Text" width="400" height="auto">
+<img src="bug_7-1.png" width="400" height="auto">
 
 ### Perbaikan
 
-Gunakan elemen _button_
+Tambahkan placeholder dan atribut _required_
 
-<img src="bugfix_6-1.png" alt="Alt Text" width="400" height="auto">
+<img src="bugfix_7-1.png" width="400" height="auto">
+
+---
