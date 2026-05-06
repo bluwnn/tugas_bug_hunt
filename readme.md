@@ -140,3 +140,28 @@ Tambahkan placeholder dan atribut _required_
 <img src="bugfix_7-1.png" width="400" height="auto">
 
 ---
+
+### 8. Bug Desain: Input Tanggal Tidak Efisien
+
+### Masalah
+
+Menggunakan tiga dropdown untuk tanggal lahir tidak efisien dan rawan kesalahan.
+
+### Kode bermasalah
+
+```
+<select id="tanggal"></select>
+<select id="bulan"></select>
+<select id="tahun"></select>
+```
+
+### Perbaikan
+
+Gunakan _input_ tanggal bawaan browser.
+
+```
+        <div class="field">
+          <label>Tanggal Lahir</label>
+          <input type="date" id="ttl" required />
+        </div>
+```
