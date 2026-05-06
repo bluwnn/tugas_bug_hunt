@@ -212,3 +212,29 @@ Gunakan tahun saat ini secara dinamis.
 ```
 
 ---
+
+### 11. Bug CSS: Tidak Menggunakan box-sizing
+
+### Masalah
+
+Padding dapat menyebabkan ukuran elemen melebihi container.
+
+### Kode bermasalah
+
+```
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+        }
+```
+
+### Perbaikan
+
+```
+* {
+    box-sizing: border-box;
+  }
+```
+
+---
