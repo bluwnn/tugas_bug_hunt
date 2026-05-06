@@ -84,3 +84,21 @@ Gunakan mode edit dengan indeks data.
 
 <img src="bugfix_4-1.png" alt="Alt Text" width="400" height="auto">
 <img src="bugfix_4-2.png" alt="Alt Text" width="400" height="auto">
+
+---
+
+### 5. Bug UI: Ikon Aksi Tidak Muncul
+
+### Masalah
+
+Menggunakan file gambar (edit.png, trash.png) tanpa memastikan keberadaan file.
+
+### Kode Bermasalah
+
+<img src="bug_5-1.png" alt="Alt Text" width="400" height="auto">
+
+### Perbaikan
+
+Gunakan ikon teks/emoji
+
+<img src="bugfix_5-1.png" alt="Alt Text" width="400" height="auto">
