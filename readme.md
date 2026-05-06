@@ -157,7 +157,7 @@ Menggunakan tiga dropdown untuk tanggal lahir tidak efisien dan rawan kesalahan.
 
 ### Perbaikan
 
-Gunakan _input_ tanggal bawaan browser.
+Gunakan _input tanggal bawaan browser.
 
 ```
         <div class="field">
@@ -165,3 +165,26 @@ Gunakan _input_ tanggal bawaan browser.
           <input type="date" id="ttl" required />
         </div>
 ```
+---
+
+### 9. Bug Keamanan: Password Ditampilkan Secara Plain Text
+
+### Masalah
+
+Password ditampilkan secara langsung di tabel, yang merupakan praktik buruk.
+
+### Kode bermasalah
+
+```
+<td>${password}</td>
+```
+
+### Perbaikan
+
+Masking password.
+
+```
+const masked = "•".repeat(mhs.password.length);
+```
+
+---
