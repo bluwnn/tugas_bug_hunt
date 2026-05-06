@@ -188,3 +188,27 @@ const masked = "•".repeat(mhs.password.length);
 ```
 
 ---
+
+### 10. Bug Maintainability: Tahun Hardcoded
+
+### Masalah
+
+Rentang tahun berhenti di 2025 dan tidak akan diperbarui otomatis.
+
+### Kode bermasalah
+
+```
+    for (let i = 1990; i <= 2025; i++) {
+        document.getElementById("tahun").innerHTML += `<option value="${i}">${i}</option>`;
+    }
+```
+
+### Perbaikan
+
+Gunakan tahun saat ini secara dinamis.
+
+```
+<input type="date" id="ttl" required /> 
+```
+
+---
