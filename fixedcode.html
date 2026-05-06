@@ -15,11 +15,22 @@
             border-radius: 10px;
             margin-bottom: 20px;
         }
-        input, textarea, select {
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
             width: 100%;
             padding: 8px;
             margin: 5px 0 15px;
+            box-sizing: border-box;
         }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+        .radio-group input[type="radio"] {
+            width: auto;
+        }     
         button {
             padding: 10px;
             margin-right: 5px;
