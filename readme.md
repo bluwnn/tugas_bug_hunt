@@ -45,3 +45,19 @@ Gunakan _localStorage_ sebagai penyimpanan data.
 Tambahkan fungsi render
 
 <img src="bugfix_2-2.png" alt="Alt Text" width="400" height="auto">
+
+### 3. Bug Logika: Fitur Edit Tidak Lengkap
+
+### Masalah
+
+Fungsi edit hanya mengisi sebagian data (tidak termasuk jenis kelamin dan tanggal lahir).
+
+### Kode Bermasalah
+
+<img src="bug_3-1.png" alt="Alt Text" width="400" height="auto">
+
+### Perbaikan
+
+<img src="bugfix_3-1.png" alt="Alt Text" width="400" height="auto">
+
+Tambahkan pengisian ulang untuk semua field.
