@@ -14,10 +14,34 @@ Semua elemen 'input' diberikan width: 100%, termasuk radio button. Hal ini menye
 
 <img src="radiobutton.png" alt="Alt Text" width="400" height="auto">
 
-<img src="bug_radiobutton.png" alt="Alt Text" width="400" height="auto">
+<img src="bug_1-1.png" alt="Alt Text" width="400" height="auto">
 
 ### Perbaikan
 
 Pisahkan styling antara input teks dan radio button.
 
-<img src="code_radiobutton.png" alt="Alt Text" width="400" height="auto">
+<img src="fixed_radiobutton.png" alt="Alt Text" width="400" height="auto">
+
+<img src="bugfix_1-1.png" alt="Alt Text" width="400" height="auto">
+
+### 2. Bug Logika: Data Tidak Tersimpan Saat Refresh
+
+### Masalah
+
+Data hanya disimpan di DOM (tabel), sehingga akan hilang saat halaman di-refresh.
+
+### Kode Bermasalah
+
+<img src="bug_2-1.png" alt="Alt Text" width="400" height="auto">
+
+<img src="bug_2-2.png" alt="Alt Text" width="400" height="auto">
+
+### Perbaikan
+
+Gunakan _localStorage_ sebagai penyimpanan data.
+
+<img src="bugfix_2-1.png" alt="Alt Text" width="400" height="auto">
+
+Tambahkan fungsi render
+
+<img src="bugfix_2-2.png" alt="Alt Text" width="400" height="auto">

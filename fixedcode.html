@@ -1,112 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Form Data Mahasiswa</title>
+
     <style>
-        body {
-            font-family: Arial;
-            margin: 20px;
-            background: #f5f5f5;
-        }
-        form {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        input[type="text"],
-        input[type="password"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 15px;
-            box-sizing: border-box;
-        }
-        .radio-group {
-            display: flex;
-            gap: 20px;
-        }
-        .radio-group input[type="radio"] {
-            width: auto;
-        }     
-        button {
-            padding: 10px;
-            margin-right: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .submit { background: green; color: white; }
-        .reset { background: orange; color: white; }
+      * {
+        box-sizing: border-box;
+      }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #f5f5f5;
+      }
 
-        img {
-            cursor: pointer;
-        }
+      .container {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .field {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      textarea,
+      input[type="date"] {
+        width: 100%;
+        padding: 8px;
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 20px;
+      }
+
+      .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: normal;
+      }
+
+      .radio-group input {
+        width: auto;
+      }
+
+      .actions {
+        margin-top: 10px;
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .submit {
+        background: green;
+        color: white;
+      }
+
+      .reset {
+        background: orange;
+        color: white;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .icon-btn {
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-size: 16px;
+      }
     </style>
-</head>
-<body>
+  </head>
 
-<h2>Form Data Mahasiswa</h2>
+  <body>
+    <div class="container">
+      <h2>Form Data Mahasiswa</h2>
 
-<form id="formMahasiswa">
-    <label>NIM</label>
-    <input type="text" id="nim" required>
+      <form id="formMahasiswa">
+        <div class="field">
+          <label>NIM</label>
+          <input type="text" id="nim" required />
+        </div>
 
-    <label>Nama</label>
-    <input type="text" id="nama" required>
+        <div class="field">
+          <label>Nama</label>
+          <input type="text" id="nama" required />
+        </div>
 
-    <label>Alamat</label>
-    <textarea id="alamat"></textarea>
+        <div class="field">
+          <label>Alamat</label>
+          <textarea id="alamat"></textarea>
+        </div>
 
-    <label>Jenis Kelamin</label><br>
-    <input type="radio" name="jk" value="Pria"> Pria
-    <input type="radio" name="jk" value="Wanita"> Wanita
-    <input type="radio" name="jk" value="Lainnya"> Lainnya
-    <br><br>
+        <div class="field">
+          <label>Jenis Kelamin</label>
+          <div class="radio-group">
+            <label><input type="radio" name="jk" value="Pria" /> Pria</label>
+            <label
+              ><input type="radio" name="jk" value="Wanita" /> Wanita</label
+            >
+            <label
+              ><input type="radio" name="jk" value="Lainnya" /> Lainnya</label
+            >
+          </div>
+        </div>
 
-    <label>Tanggal Lahir</label>
-    <select id="tanggal"></select>
-    <select id="bulan">
-        <option value="01">Januari</option>
-        <option value="02">Februari</option>
-        <option value="03">Maret</option>
-        <option value="04">April</option>
-        <option value="05">Mei</option>
-        <option value="06">Juni</option>
-        <option value="07">Juli</option>
-        <option value="08">Agustus</option>
-        <option value="09">September</option>
-        <option value="10">Oktober</option>
-        <option value="11">November</option>
-        <option value="12">Desember</option>
-    </select>
-    <select id="tahun"></select>
+        <div class="field">
+          <label>Tanggal Lahir</label>
+          <input type="date" id="ttl" required />
+        </div>
 
-    <label>Password</label>
-    <input type="password" id="password">
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="password" required />
+        </div>
 
-    <button type="submit" class="submit">Submit</button>
-    <button type="reset" class="reset">Reset</button>
-</form>
+        <div class="actions">
+          <button type="submit" class="submit">Submit</button>
+          <button type="reset" class="reset">Reset</button>
+        </div>
+      </form>
 
-<h2>Data Mahasiswa</h2>
+      <h2>Data Mahasiswa</h2>
 
-<table>
-    <thead>
-        <tr>
+      <table>
+        <thead>
+          <tr>
             <th>NIM</th>
             <th>Nama</th>
             <th>Alamat</th>
@@ -114,78 +169,112 @@
             <th>TTL</th>
             <th>Password</th>
             <th>Aksi</th>
-        </tr>
-    </thead>
-    <tbody id="tableBody"></tbody>
-</table>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
 
-<script>
-    const form = document.getElementById("formMahasiswa");
-    const tableBody = document.getElementById("tableBody");
+    <script>
+      const form = document.getElementById("formMahasiswa");
+      const tableBody = document.getElementById("tableBody");
 
-    // Isi dropdown tanggal & tahun
-    for (let i = 1; i <= 31; i++) {
-        document.getElementById("tanggal").innerHTML += `<option value="${i}">${i}</option>`;
-    }
+      const nimInput = document.getElementById("nim");
+      const namaInput = document.getElementById("nama");
+      const alamatInput = document.getElementById("alamat");
+      const ttlInput = document.getElementById("ttl");
+      const passwordInput = document.getElementById("password");
 
-    for (let i = 1990; i <= 2025; i++) {
-        document.getElementById("tahun").innerHTML += `<option value="${i}">${i}</option>`;
-    }
+      let dataMahasiswa =
+        JSON.parse(localStorage.getItem("dataMahasiswa")) || [];
+      let editingIndex = null;
 
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
+      // Format tanggal untuk tampilan
+      function formatTanggal(dateStr) {
+        const [year, month, day] = dateStr.split("-");
+        return `${day}-${month}-${year}`;
+      }
 
-        const nim = document.getElementById("nim").value;
-        const nama = document.getElementById("nama").value;
-        const alamat = document.getElementById("alamat").value;
-        const jk = document.querySelector('input[name="jk"]:checked')?.value || "-";
+      // Render tabel
+      function renderTable() {
+        tableBody.innerHTML = "";
 
-        const tanggal = document.getElementById("tanggal").value;
-        const bulan = document.getElementById("bulan").value;
-        const tahun = document.getElementById("tahun").value;
+        dataMahasiswa.forEach((mhs, index) => {
+          const row = document.createElement("tr");
 
-        const ttl = `${tanggal}-${bulan}-${tahun}`;
-        const password = document.getElementById("password").value;
+          const masked = "•".repeat(mhs.password.length);
 
-        const row = document.createElement("tr");
-
-        row.innerHTML = `
-            <td>${nim}</td>
-            <td>${nama}</td>
-            <td>${alamat}</td>
-            <td>${jk}</td>
-            <td>${ttl}</td>
-            <td>${password}</td>
+          row.innerHTML = `
+            <td>${mhs.nim}</td>
+            <td>${mhs.nama}</td>
+            <td>${mhs.alamat}</td>
+            <td>${mhs.jk}</td>
+            <td>${formatTanggal(mhs.ttl)}</td>
+            <td>${masked}</td>
             <td>
-                <a href="#" onclick="editRow(this)">
-                    <img src="edit.png" width="20">
-                </a>
-                <a href="#" onclick="deleteRow(this)">
-                    <img src="trash.png" width="20">
-                </a>
+                <button class="icon-btn" onclick="editRow(${index})">✏️</button>
+                <button class="icon-btn" onclick="deleteRow(${index})">🗑️</button>
             </td>
         `;
 
-        tableBody.appendChild(row);
+          tableBody.appendChild(row);
+        });
+      }
+
+      // Submit handler
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const data = {
+          nim: nimInput.value,
+          nama: namaInput.value,
+          alamat: alamatInput.value,
+          jk: document.querySelector('input[name="jk"]:checked')?.value || "-",
+          ttl: ttlInput.value,
+          password: passwordInput.value,
+        };
+
+        if (editingIndex !== null) {
+          dataMahasiswa[editingIndex] = data;
+          editingIndex = null;
+        } else {
+          dataMahasiswa.push(data);
+        }
+
+        localStorage.setItem("dataMahasiswa", JSON.stringify(dataMahasiswa));
+
+        renderTable();
         form.reset();
-    });
+      });
 
-    function deleteRow(el) {
-        el.parentElement.parentElement.remove();
-    }
+      // Delete
+      function deleteRow(index) {
+        dataMahasiswa.splice(index, 1);
+        localStorage.setItem("dataMahasiswa", JSON.stringify(dataMahasiswa));
+        renderTable();
+      }
 
-    function editRow(el) {
-        const row = el.parentElement.parentElement;
-        const cells = row.children;
+      // Edit
+      function editRow(index) {
+        const mhs = dataMahasiswa[index];
 
-        document.getElementById("nim").value = cells[0].innerText;
-        document.getElementById("nama").value = cells[1].innerText;
-        document.getElementById("alamat").value = cells[2].innerText;
-        document.getElementById("password").value = cells[5].innerText;
+        editingIndex = index;
 
-        row.remove();
-    }
-</script>
+        nimInput.value = mhs.nim;
+        namaInput.value = mhs.nama;
+        alamatInput.value = mhs.alamat;
 
-<!--</body>-->
+        const radio = document.querySelector(
+          `input[name="jk"][value="${mhs.jk}"]`,
+        );
+        if (radio) radio.checked = true;
+
+        ttlInput.value = mhs.ttl;
+        passwordInput.value = "";
+      }
+
+      // Init
+      renderTable();
+    </script>
+  </body>
 </html>
