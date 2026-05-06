@@ -24,6 +24,8 @@ Pisahkan styling antara input teks dan radio button.
 
 <img src="bugfix_1-1.png" alt="Alt Text" width="400" height="auto">
 
+---
+
 ### 2. Bug Logika: Data Tidak Tersimpan Saat Refresh
 
 ### Masalah
@@ -46,6 +48,8 @@ Tambahkan fungsi render
 
 <img src="bugfix_2-2.png" alt="Alt Text" width="400" height="auto">
 
+---
+
 ### 3. Bug Logika: Fitur Edit Tidak Lengkap
 
 ### Masalah
@@ -58,6 +62,25 @@ Fungsi edit hanya mengisi sebagian data (tidak termasuk jenis kelamin dan tangga
 
 ### Perbaikan
 
+Tambahkan pengisian ulang untuk semua field.
+
 <img src="bugfix_3-1.png" alt="Alt Text" width="400" height="auto">
 
-Tambahkan pengisian ulang untuk semua field.
+---
+
+### 4. Bug UX: Mekanisme Edit Menghapus Data Lama
+
+### Masalah
+
+Data lama dihapus saat edit, kemudian dibuat ulang. Ini berisiko kehilangan data jika pengguna tidak menyimpan ulang.
+
+### Kode Bermasalah
+
+<img src="bug_4-1.png" alt="Alt Text" width="400" height="auto">
+
+### Perbaikan
+
+Gunakan mode edit dengan indeks data.
+
+<img src="bugfix_4-1.png" alt="Alt Text" width="400" height="auto">
+<img src="bugfix_4-2.png" alt="Alt Text" width="400" height="auto">
