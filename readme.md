@@ -44,7 +44,7 @@ Gunakan _localStorage_ sebagai penyimpanan data.
 
 <img src="bugfix_2-1.png" alt="Alt Text" width="400" height="auto">
 
-Tambahkan fungsi render
+Tambahkan fungsi render, Fungsinya untuk menyimpan data di browser secara permanen sehingga setelah refresh data tetap muncul kembali.
 
 <img src="bugfix_2-2.png" alt="Alt Text" width="400" height="auto">
 
@@ -59,12 +59,22 @@ Fungsi edit hanya mengisi sebagian data (tidak termasuk jenis kelamin dan tangga
 ### Kode Bermasalah
 
 <img src="bug_3-1.png" alt="Alt Text" width="400" height="auto">
+Kode tersebut hanya mengisi beberapa input saja, sehingga field lain seperti:
+
+alamat
+jenis kelamin
+tanggal lahir
+password
+
+bisa kosong atau tidak sesuai data sebelumnya.
 
 ### Perbaikan
 
 Tambahkan pengisian ulang untuk semua field.
 
 <img src="bugfix_3-1.png" alt="Alt Text" width="400" height="auto">
+
+Perbaikannya menggunakan fungsi editRow(index) agar semua data mahasiswa diambil dari array dataMahasiswa lalu dimasukkan kembali ke setiap field form.
 
 ---
 
@@ -233,7 +243,7 @@ Padding dapat menyebabkan ukuran elemen melebihi container.
 
 ```
 * {
-    box-sizing: border-box;
+    risize:none;
   }
 ```
 
